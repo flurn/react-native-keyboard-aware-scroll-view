@@ -273,12 +273,12 @@ function KeyboardAwareHOC(
 
     scrollToPosition = (x: number, y: number, animated: boolean = true) => {
       const responder = this.getScrollResponder()
-      responder && responder.scrollTo({ x, y, animated })
+      responder && responder.scrollResponderScrollTo({ x, y, animated })
     }
 
     scrollToEnd = (animated?: boolean = true) => {
       const responder = this.getScrollResponder()
-      responder && responder.scrollToEnd({ animated })
+      responder && responder.scrollResponderScrollToEnd({ animated })
     }
 
     scrollForExtraHeightOnAndroid = (extraHeight: number) => {
